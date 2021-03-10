@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Takeda</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js" integrity="sha512-oHBLR38hkpOtf4dW75gdfO7VhEKg2fsitvHZYHZjObc4BPKou2PGenyxA5ZJ8CCqWytBx5wpiSqwVEBy84b7tw==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../static/Javasccc.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 850px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #00081b;
+      #background-color: #cecece;
+      height: 100%;
+    }
+		 .list-group-item {
+      background-color: #b2cede;
+    }.navbar{
+	 background-color: #0d1442;
+	}body {
+    font-family: Calibri;
+	}
+
+
+    input#js-upload-submit{
+    background: green;
+	width:200px;
+}
+
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+	    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+    }
+    .row {
+      display: flex; /* equal height of the children */
+    }
+
+    .col {
+      flex: 1; /* additionally, equal width */
+
+      padding: 1em;
+      border: None;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        /*padding: 15px;*/
+      }
+      .row.content {height:auto;}
+    }
+  </style>
+<style>
+/* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+
+.list-group {
+    width: 400px;
+	margin: auto;
+}
+
+</style>
+
+</head>
+<body style="
+    background-color: #00081b;
+">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <!--  <span class="icon-bar"></span>
+        <span class="icon-bar"></span>-->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/home">Home</a></li>
+        <!--  <li><a href="/predict">Predict</a></li>-->
+
+        </ul>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Reset</a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+  <div class="col-sm-2 sidenav">
+  </div>
+    <div class="col-sm-8 text-center"  style="
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #00081b;
+    color: white;
+">
+<div class="row">
+  <div class="col">
+    <br><br>
+    <h3>Select the deck for Takeda product </h3>
+<br><br>
+<form method=post enctype=multipart/form-data id="js-upload-form">
+  <div class="form-inline">
+    <label for="Product">Product:</label>
+    <select id="Product" name="Product" style="
+        color: #000;">
+      <option value="Product 1">Product 1</option>
+      <option value="Product 2">Product 2</option>
+      <option value="Product 3">Product 3</option>
+      <option value="Product 4">Product 4</option>
+      <option value="Product 5">Product 5</option>
+      <option value="Product 6">Product 6</option>
+    </select>
+<br><br>
+<!--  <input type=submit class="btn btn-primary" id="js-upload-submit" onclick="myFunction()" value=Upload > </input>
+-->
+  </div>
+</form>
+
+
+   </div>
+  <div class="col">
+	<br><br>
+  <h3>Select physician for citation approval deck </h3>
+  <p>Identify the slide shared by the Physician for citation approval that has been taken from the Master Product Slide deck.</p>
+  <!--<h3>Select physician for citation approval deck from your computer</h3>
+  <h4>Identify the slide shared by the Physician for citation approval that has been taken from the Master Product Slide deck.</h4>
+-->
+  <br><br>
+          <form method=post enctype=multipart/form-data id="js-upload-form">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="file" id="js-upload-files" >
+              </div>
+              <br><br>
+            <input type=submit class="btn btn-primary" id="js-upload-submit" onclick="myFunction()" value=Upload > </input>
+            </div>
+          </form>
+      <br><br>
+
+	  Files Uploaded
+		  <div class="list-group">
+				  {% for file in file_list %}
+
+				  <a href="/preview/{{file}}" class="list-group-item list-group-item-action "> {{file}}</a>
+
+				{% endfor %}
+
+			</div>
+      <a href="/function"> <input type="button" class="btn btn-primary" onclick="ML()"value="RUN">
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-2 sidenav">
+  </div>
+  </div>
+</div>
+
+</body>
+</html>

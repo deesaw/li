@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Takeda</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js" integrity="sha512-oHBLR38hkpOtf4dW75gdfO7VhEKg2fsitvHZYHZjObc4BPKou2PGenyxA5ZJ8CCqWytBx5wpiSqwVEBy84b7tw==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../static/Javasccc.js"></script>
+   <link href="../static/main.css" type="text/css" rel="stylesheet">
+
+</head>
+<body class="page1background">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Reset</a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+  <div class="col-sm-2 sidenav">
+  </div>
+  <div class="col-sm-8 text-center customfont"  >
+<h2>Identify the slide shared by the Physician for citation approval that has been taken from the Master Product Slide deck.</h2>
+
+<div class="row">
+<div class="col">
+    <br><br>
+    <h3>Select the deck for Takeda product </h3>
+<br><br>
+<form method=post enctype=multipart/form-data id="js-upload-form">
+  <div class="form-inline">
+    <label for="Product">Product:</label>
+    <select id="Product" name="Product"  class="colorblack">
+      <option value="Product 1">Product 1</option>
+      <option value="Product 2">Product 2</option>
+      <option value="Product 3">Product 3</option>
+      <option value="Product 4">Product 4</option>
+      <option value="Product 5">Product 5</option>
+      <option value="Product 6">Product 6</option>
+    </select>
+<br><br>
+  </div>
+</form>
+
+
+   </div>
+  <div class="col">
+	<br><br>
+  <h3>Select physician for citation approval deck </h3>
+
+  <br><br>
+          <form method=post enctype=multipart/form-data id="js-upload-form">
+            <div class="form-inline">
+
+              <div class="form-group" >
+                <input class="padleft" type="file" name="file" id="js-upload-files" >
+              <br><br>
+              <input style="
+                color: #fff;" type=submit class="btn btn-primary" id="js-upload-submit" onclick="myFunction()" value=Upload > </input>
+                </div>
+            </div>
+          </form>
+      <br><br>
+
+	  Files Uploaded
+		  <div class="list-group">
+				  {% for file in file_list %}
+
+				  <a href="/preview/{{file}}" class="list-group-item list-group-item-action "> {{file}}</a>
+
+				{% endfor %}
+
+			</div>
+
+    </div>
+
+  </div>
+  <a href="/function"> <input type="button" class="btn btn-primary" onclick="ML()"value="RUN">
+  </a>
+  <p id="text"></p>
+  <div class="col-sm-2 sidenav">
+  </div>
+  </div>
+</div>
+
+</body>
+</html>

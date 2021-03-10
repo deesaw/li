@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Takeda</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js" integrity="sha512-oHBLR38hkpOtf4dW75gdfO7VhEKg2fsitvHZYHZjObc4BPKou2PGenyxA5ZJ8CCqWytBx5wpiSqwVEBy84b7tw==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../static/Javasccc.js"></script>
+  <script type="text/javascript" src="../static/Javasccc.js"></script>
+   <link href="../static/main.css" type="text/css" rel="stylesheet">
+<style>
+
+
+</style>
+
+</head>
+<body >
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/home">Home</a></li>
+        </ul>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Reset</a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+<div class="container-fluid text-center" class="colorblue center">
+  <div class="row content colorblue center" >
+  <div class="col-sm-2 sidenav colorblue center" ></div>
+	<div class="col-sm-8 text-center center colorblack textarea colorwhitebackground" >
+		<br><br>
+		<div class="center paddheading colorwhitebackground" >
+			<h3 > Physician slides for citation approval that has been taken from the master product slide deck are:</h3>
+			<div class="table-wrapper-scroll-y  center scroll"
+      style="height:400px;">
+				{% for table in tables %}
+				{{ table|safe }}
+				{% endfor %}
+			</div>
+			</div>
+		</div>
+	<div class="col-sm-2 sidenav colorblue" >
+ </div>
+</div>
+
+
+</body>
+</html>

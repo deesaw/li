@@ -1,0 +1,24 @@
+﻿Account,Risk Cat,Avg Pay Days,Delayed Amt %,P30DTOA,90DSO,Decision
+1,Moderate Risk,-16.98,2.91,0,13.18,Approved
+2,Low Risk,-3.53,30.99,38.78,4.71,Approved
+3,Moderate Risk,7.63,92,0,34.26,Rejected
+4,Moderate Risk,-10.82,12.4,0,17.43,Approved
+5,Moderate Risk,15.83,87.73,0,31.75,Rejected
+6,Moderate Risk,0,0,0,90,Rejected
+7,Moderate Risk,-18.11,0.16,0,4.45,Approved
+8,Low Risk,-13.36,0.03,0,17.04,Approved
+9,Low Risk,5.83,89.51,0,35.1,Hold
+10,Low Risk,-9.28,7,-0.43,30.77,Approved
+11,Moderate Risk,-4.58,18.86,0,14.04,Approved
+12,Moderate Risk,-3.48,49.44,0,0.25,Hold
+13,Low Risk,3.36,83.12,0.18,4.46,Hold
+14,Low Risk,10.86,98.95,0,2.59,Hold
+15,Moderate Risk,-5.33,27.95,0,0,Approved
+16,Low Risk,-0.08,59.95,0,19.6,Approved
+17,Low Risk,-11.91,0,0,15.94,Approved
+18,Low Risk,-10.46,0.46,0.36,20.14,Approved
+19,Low Risk,30.5,100,0,0,Rejected
+20,Moderate Risk,-17.26,0,0,0,Approved
+21,Low Risk,-4.6,9.06,0.33,21.44,Approved
+22,Low Risk,-9.57,7.99,49.02,68.85,Hold
+23,Moderate Risk,-11.67,0,0,44.52,Hold

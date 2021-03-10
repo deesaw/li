@@ -1,0 +1,23 @@
+{% extends "form.html" %}
+
+{% block content1 %}
+{% if flag1 %}
+	  <script type="text/javascript">
+		var res1 =  {{ res|tojson }}
+		document.getElementById("dec").value = res1;
+		var res2 =  {{ conf|tojson }}
+		document.getElementById("conf").value = res2;
+	  </script>
+{% endif %}
+
+{% if train_succ %}
+	<script>
+		alert("Training Successful!");
+	 </script>
+{% endif %}
+<script type="text/javascript">
+	var res2 =  {{request.form['Risk Cat']|tojson }}
+  document.getElementById('risk_cat').value=res2>";
+</script>
+
+{% endblock %}

@@ -1,0 +1,111 @@
+.sidenav {
+  padding-top: 20px;
+  background-color: #00081b;
+  height: 100%;
+}
+.scroll
+{
+  padding-top: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.textarea
+{
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #fff;
+}
+.paddheading
+{
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.center
+{
+  text-align: center;
+}
+.colorblue
+{
+  background-color: #00081b;
+}
+.colorwhitebackground
+{
+  background-color: #fff;
+}
+.colorblack
+{
+  color: #000;
+}
+.colorwhite
+{
+  color: #fff;
+}
+.padleft{
+  padding-left:40px;
+}
+.customfont {
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #00081b;
+  color: white;
+}
+.page1background{
+  background-color: #00081b;
+}
+/* Remove the navbar's default margin-bottom and rounded borders href="{{ url_for('static', filename='main.css') }}"*/
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #0d1442;
+}
+
+.row.content {height: 850px}
+
+.list-group-item {
+    background-color: #b2cede;
+    }
+
+
+  input#js-upload-submit{
+  background: green;
+  width:200px;
+  }
+
+
+body {
+  font-family: Calibri;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    /*padding: 15px;*/
+  }
+  .row.content {height:auto;}
+}
+
+
+
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+	position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+    }
+
+    .row {
+      display: flex; /* equal height of the children */
+    }
+
+    .col {
+      flex: 1; /* additionally, equal width */
+
+      padding: 1em;
+      border: None;
+    }

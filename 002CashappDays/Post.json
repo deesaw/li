@@ -1,0 +1,42 @@
+{
+    "0": {
+        "Payer": "100030",
+        "Debit_CreditInd.": "H"
+    },
+    "1": {
+        "Payer": "100030",
+        "Debit_CreditInd.": "S"
+    },
+    "2": {
+        "Payer": "70000010",
+        "Debit_CreditInd.": "S"
+    },
+    "3": {
+        "Payer": "300767",
+        "Debit_CreditInd.": "S"
+    },
+    "4": {
+        "Payer": "100040",
+        "Debit_CreditInd.": "H"
+    },
+    "5": {
+        "Payer": "100059",
+        "Debit_CreditInd.": "H"
+    },
+    "6": {
+        "Payer": "301096",
+        "Debit_CreditInd.": "S"
+    },
+    "7": {
+        "Payer": "301097",
+        "Debit_CreditInd.": "S"
+    },
+    "8": {
+        "Payer": "301136",
+        "Debit_CreditInd.": "S"
+    },
+    "9": {
+        "Payer": "70000000",
+        "Debit_CreditInd.": "1"
+    }
+}

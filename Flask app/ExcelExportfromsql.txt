@@ -1,0 +1,59 @@
+import pyodbc
+import pandas as pd
+conn = pyodbc.connect("Driver={SQL Server};"
+                              "Server=ussltcsnw1940.solutions.glbsnet.com;"
+                              "Database=DATAFIRST;"
+                              "UID=deesaw;"
+                              "PWD=Welcome@123")
+list=['tvMARA_Stock_Material_PSTAT_L_HasStorageView_MissingStorageLoc_Rpt'
+,'tvMARA_CostedMaterial_Missing_CostingView_Rpt'
+,'tv_MARC_BESKZ_EKGRP_EXTERNALLY_PROCURED__Rpt'
+,'tv_MARC_BESKZ_EKGRP_EXTERNALLY_PROCURED__Rpt'
+,'tv_MAST_MATNR_STLNR_IDNRK_BOM_MATERIAL_WITH_DIFF_COMPONENT_Rpt'
+,'tvMARA_MATKL_MaterialGroup_Missing_Length_GreaterThan9_Rpt'
+,'tvMARA_Relevancy_All_ERSDA_BWKEY_DailyCreate_Rpt'
+,'tvMARA_Relevancy_All_ERSDA_BWKEY_MonthlyCreate_Rpt'
+,'tvMARA_Relevancy_All_ERSDA_LGNUM_DailyCreate_Rpt'
+,'tvMARA_Relevancy_All_ERSDA_LGNUM_MonthlyCreate_Rpt'
+,'tvMARC_BESKZ_SOBSL_MTART_WERKS_GroupBy_Count_Rpt'
+,'tvMARA_EKPO_EKKO_EBELN_Rpt'
+,'tvMAPL_PLKO_PLPO_N_Routing_AUFAK_ScrapMissing_Rpt'
+,'tvMARA_Relevancy_All_EAN11_Duplicate_Detail_Rpt'
+,'tv_MARA_HERS_MAKTX_NOT_SAME_Rpt'
+,'tvMARA_Relevancy_All_ManufacturerParts_MFRNR_Missing_Rpt'
+,'tv_RefIntegrity_MARC_BESKZ_PSTAT_NOTMANUFACTURED_WITHMRP_Rpt'
+,'tvMARA_BroughtMaterials_MAST_WithBOM_Rpt'
+,'tv_MARC_PSTAT_MBEW_BWKEY_VPRSV_PEINH_RAW_PROCURED_MATERIALS_PURCHASE_ACCOUNTING_VIEW_Rpt'
+,'tvMARA_Relevancy_1ProductHierarchy_Multiple_Finished_Goods'
+,'tv_MARA_EAN11_EANISNOTMATIANED_OR_EAN11ISGREATERTHAN18_Rpt'
+,'tv_MARA_MVKE_MBEW_SEMI_FINISHED_SALES_ACCOUNTING_Rpt'
+,'tv_PE_MARC_QMATV_QINF_MISSINGQUALITYINFORECORD_Rpt'
+,'tv_MN_MARC_PLIFZ_MISSINGPLANNEDDELIVERYTIME_Rpt'
+,'tvMARC_ProcurementType_E_SOBSL_NotNull'
+,'tv_MARA_RDMHD_LENGTH_LESS_THAN_EQUAL_TO1_Rpt'
+,'tv_MARC_PSTAT_MATERIALS_NOT_SOLD_HAVING_SALES_VIEW_Rpt'
+,'tvMARA_NoBuyMaterials_WithPurchasingView_Rpt'
+,'tvMARA_Sell_Material_ZOldDays_MM_141'
+,'tv_MARA_DUPLICATESBASEDON_MTART_MAKTX_MATKL_MEINS_Rpt'
+,'tv_MARA_GROES_SIZE_DIMENSION_NOT_MAINTAINED_Rpt'
+,'tv_MARA_BRGEW_NTGEW_GEWEI_GROSSNETWEIGHT_WEIGHTUNIT_NOT_MAINTAINED_Rpt'
+,'tvMARA_Relevancy_Open_Sales_Order'
+,'vMARA_Relevancy_SalesOrder_Within_ZOldDays'
+,'tvMARA_Material_That_Are_Not_Stocked_In_ZOldDays_Rpt'
+,'tvMARA_VRKME_SalesUoM_Blank_LVSMW_WHUoM_And_AUSMW_UnitOfIssue_NotBlank_Rpt'
+,'tvMARA_NonStockMaterial_NotStocked_With_StorageLoc_Rpt']
+
+for v in list:
+    script="select * from dbo."+v+";"
+    cursor = conn.cursor()
+    script="select * from dbo."+v 
+    cursor.execute(script)
+    rows=cursor.fetchall() 
+    names = [desc[0] for desc in cursor.description] 
+    df = pd.DataFrame([tuple(t) for t in rows]) 
+    df.columns=names
+    print(df.shape)
+    excelname=v+'.xlsx'
+    writer = pd.ExcelWriter(excelname)
+    df.to_excel(writer, sheet_name='bar',index=False)
+    writer.save()
